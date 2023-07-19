@@ -26,6 +26,10 @@ var app = http.createServer(function (request, response) {
     topic.updateProcess(request,response);
   } else if (pathname === "/delete_process") {
     topic.delete(request, response);
+  } else if (pathname === "/authorList"){
+    topic.authorList(request, response);
+  } else if (pathname === "/authorDelete") {
+    topic.authorDelete(request, response);
   } else {
     response.writeHead(404);
     response.end("Not found");
